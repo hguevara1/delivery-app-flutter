@@ -33,6 +33,8 @@ class ApiService {
         response = await http.post(url, headers: headers, body: jsonEncode(body));
       } else if (method == 'PATCH') {
         response = await http.patch(url, headers: headers, body: jsonEncode(body));
+      } else if (method == 'PUT') {
+        response = await http.put(url, headers: headers, body: jsonEncode(body));
       } else {
         response = await http.get(url, headers: headers);
       }
